@@ -1,0 +1,137 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /robot_description
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Value: true
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Show Names: false
+      Marker Scale: 0.3
+      Value: true
+    - Class: rviz_default_plugins/Odometry
+      Name: FK Odom (red)
+      Enabled: true
+      Topic:
+        Value: /fk/odom
+        Depth: 5
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+      Keep: 1
+      Position Tolerance: 0.1
+      Angle Tolerance: 0.1
+      Shape:
+        Value: Arrow
+        Color: 255; 0; 0
+        Alpha: 1
+        Shaft Length: 0.25
+        Shaft Radius: 0.01
+        Head Length: 0.06
+        Head Radius: 0.03
+      Covariance:
+        Value: false
+      Value: true
+    - Class: rviz_default_plugins/Odometry
+      Name: Plugin Odom (green)
+      Enabled: true
+      Topic:
+        Value: /plugin/odom
+        Depth: 5
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+      Keep: 1
+      Position Tolerance: 0.1
+      Angle Tolerance: 0.1
+      Shape:
+        Value: Arrow
+        Color: 0; 200; 0
+        Alpha: 1
+        Shaft Length: 0.25
+        Shaft Radius: 0.01
+        Head Length: 0.06
+        Head Radius: 0.03
+      Covariance:
+        Value: false
+      Value: true
+    - Class: rviz_default_plugins/Odometry
+      Name: Ground Truth (blue)
+      Enabled: true
+      Topic:
+        Value: /ground_truth/odom
+        Depth: 5
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+      Keep: 1
+      Position Tolerance: 0.1
+      Angle Tolerance: 0.1
+      Shape:
+        Value: Arrow
+        Color: 0; 120; 255
+        Alpha: 1
+        Shaft Length: 0.25
+        Shaft Radius: 0.01
+        Head Length: 0.06
+        Head Radius: 0.03
+      Covariance:
+        Value: false
+      Value: true
+    - Class: rviz_default_plugins/Path
+      Name: FK Path
+      Enabled: true
+      Topic:
+        Value: /fk/path
+        Depth: 5
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+      Color: 255; 85; 0
+      Line Style: Lines
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: odom
+    Frame Rate: 30
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 3.5
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Pitch: 0.9
+      Yaw: 3.9
+      Name: Current View
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+Window Geometry:
+  Height: 800
+  Width: 1200

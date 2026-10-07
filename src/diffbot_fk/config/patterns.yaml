@@ -1,0 +1,14 @@
+# Motion pattern parameters for pattern_driver_node (closed loop on /fk/odom).
+pattern_driver:
+  ros__parameters:
+    pattern: square            # only 'square' is implemented
+    side_length: 1.0           # [m]
+    loops: 1                   # how many times to drive the square
+    clockwise: false           # false = counter-clockwise (left turns)
+    linear_speed: 0.15         # [m/s] max forward speed (Burger limit 0.22)
+    angular_speed: 0.3         # [rad/s] max turn speed; slow turns slip less in Gazebo
+    distance_tolerance: 0.005  # [m] a side is done when this close to its length
+    angle_tolerance: 0.01      # [rad] a turn is done when this close to 90 deg
+    heading_gain: 2.0          # [1/s] heading hold while driving straight
+    start_delay: 1.0           # [s] wait after the first /fk/odom before moving
+    control_rate: 20.0         # [Hz]

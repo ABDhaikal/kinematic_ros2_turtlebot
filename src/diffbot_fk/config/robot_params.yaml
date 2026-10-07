@@ -1,0 +1,23 @@
+# Node parameters. Kinematic values must match urdf/diffbot.urdf.xacro (TurtleBot3 Burger).
+fk_odometry:
+  ros__parameters:
+    wheel_radius: 0.033          # r [m]
+    wheel_separation: 0.160      # L [m]
+    left_wheel_joint: wheel_left_joint
+    right_wheel_joint: wheel_right_joint
+    odom_frame: odom
+    base_frame: base_footprint
+    integration_method: exact    # exact | midpoint | euler
+    publish_tf: true
+    path_min_step: 0.01          # [m] minimum distance between points in /fk/path
+    log_period: 2.0              # [s]
+
+keypad_teleop:
+  ros__parameters:
+    linear_speed: 0.15           # [m/s] initial speed
+    angular_speed: 1.0           # [rad/s] initial speed
+    max_linear_vel: 0.22         # TurtleBot3 Burger limit
+    max_angular_vel: 2.84
+    wheel_radius: 0.033
+    wheel_separation: 0.160
+    publish_rate: 10.0
